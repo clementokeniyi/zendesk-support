@@ -1,4 +1,4 @@
-# Zendesk Support Portfolio — CJays Solutions
+# Zendesk Support — CJays Solutions
 
 A fully configured Zendesk Support environment built to demonstrate 
 real-world customer support administration skills — designed around 
