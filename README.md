@@ -1,148 +1,154 @@
-# Zendesk Support — CJays Solutions
+<div align="center">
 
-A fully configured Zendesk Support environment built to demonstrate 
-real-world customer support administration skills — designed around 
-solving actual operational problems, not just exploring features.
+# Zendesk Support Administration Portfolio
 
-**Environment:** cjayssolutions.zendesk.com (Trial)  
-**Built by:** Clement Okeniyi
+[![Zendesk](https://img.shields.io/badge/Zendesk-03363D?style=for-the-badge&logo=zendesk&logoColor=white)](https://cjayssolutions.zendesk.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/clementokeniyi/zendesk-support)
+[![Status](https://img.shields.io/badge/Instance-Live-brightgreen?style=for-the-badge)]()
+[![Channels](https://img.shields.io/badge/Channels-Email%20·%20Chat%20·%20Voice%20·%20AI-6C63FF?style=for-the-badge)]()
 
----
+**Clement Okeniyi** · Support Operations Administrator  
+`cjayssolutions.zendesk.com`
 
-## The Problem I Was Solving
-
-Most support teams struggle with the same core issues: agents waste 
-time on repetitive tasks, customers feel ignored, managers have no 
-visibility into what's going wrong, and teams grow without any 
-documented processes to scale from.
-
-This Zendesk environment was built to address each of those problems 
-systematically — using the platform's native tools to create structure, 
-automation, accountability, and self-service capability.
+</div>
 
 ---
 
-## What I Built and Why
+## Overview
 
-### 1. Custom Ticket Views
-**Problem:** Agents working from a single unorganized queue waste time 
-figuring out what to work on next. High-priority tickets get buried.
+This repository documents the audit and optimization of a Zendesk Support instance for CJays Solutions, an e-commerce brand. The scope covers the full support operations stack — routing architecture, SLA governance, automation, omnichannel configuration, AI deflection, analytics, and agent enablement.
 
-**Solution:** Created three focused views that surface the right work 
-at the right time:
-- **Open Tickets** — one clean list of everything that needs attention
-- **Pending Tickets** — isolates tickets waiting on customers so 
-  nothing gets forgotten
-- **Solved Tickets (Last 30 Days)** — gives team leads visibility for 
-  quality reviews and coaching
+Every configuration decision is documented against the operational problem it solves.
 
-> Result: Agents spend less time searching and more time resolving.
+📋 [Audit Report](audit-report.md) · 🔌 [Integration Architecture](integration-architecture.md) · 📁 [SOPs](SOPs/)
 
 ---
 
-### 2. Macros (Canned Responses)
-**Problem:** Every agent writes their own version of the same response, 
-leading to inconsistent tone, missed information, and wasted time.
+## 🛠 Tech Stack
 
-**Solution:** Built three macros that standardize the most common 
-interactions:
-- **Acknowledge - Ticket Received** — sets a professional tone from 
-  the very first reply
-- **Follow Up - Waiting on Customer** — keeps stalled tickets moving 
-  without manual effort
-- **Resolve - Issue Fixed** — closes the loop with the customer and 
-  solves the ticket in one action
-
-> Result: Faster responses, consistent communication, and less 
-> cognitive load on agents.
+![Zendesk Support](https://img.shields.io/badge/Zendesk_Support-03363D?style=flat-square&logo=zendesk&logoColor=white)
+![Zendesk Explore](https://img.shields.io/badge/Zendesk_Explore-03363D?style=flat-square&logo=zendesk&logoColor=white)
+![Zendesk Talk](https://img.shields.io/badge/Zendesk_Talk-03363D?style=flat-square&logo=zendesk&logoColor=white)
+![Zendesk AI](https://img.shields.io/badge/Zendesk_AI_Agents-03363D?style=flat-square&logo=zendesk&logoColor=white)
+![Shopify](https://img.shields.io/badge/Shopify-96BF48?style=flat-square&logo=shopify&logoColor=white)
+![REST API](https://img.shields.io/badge/REST_API-FF6C37?style=flat-square&logo=postman&logoColor=white)
+![Webhooks](https://img.shields.io/badge/Webhooks-000000?style=flat-square&logo=zapier&logoColor=white)
 
 ---
 
-### 3. Triggers (Automation Rules)
-**Problem:** Customers submit tickets and hear nothing, so they send 
-follow-up emails that create duplicate tickets. Agents also have to 
-manually assign every new ticket — a task that adds no value.
+## Configuration Summary
 
-**Solution:** Configured two triggers to handle these automatically:
-- **Auto-Reply on Ticket Creation** — customer gets an instant 
-  confirmation with their ticket ID, eliminating "did you get my 
-  email?" follow-ups
-- **Auto-Assign to Support Group** — new tickets route to the right 
-  team immediately, no manual assignment needed
-
-> Result: Better customer experience from the first second, and agents 
-> only touch tickets when there's actual work to do.
-
----
-
-### 4. SLA Policy
-**Problem:** Without defined response time targets, some tickets get 
-resolved in an hour and others sit for three days. There's no 
-accountability and no way to measure performance.
-
-**Solution:** Created a Standard Support SLA with tiered targets by 
-priority level:
-- Urgent: 1 hour first reply
-- High: 4 hours first reply
-- Normal: 8 hours first reply
-- Low: 24 hours first reply
-
-> Result: Customers know what to expect, managers can measure 
-> performance, and the team has a clear standard to work toward.
+| Component | Details |
+|-----------|---------|
+| 👁 Views | 3 custom views (Open, Pending, Solved 30d) |
+| ⚡ Triggers | 4 (Auto-reply, Auto-assign, Routing ×3) |
+| 🤖 Automations | Auto-close pending — 48hr inactivity |
+| 📝 Macros | 3 (Acknowledge, Follow-Up, Resolve) |
+| ⏱ SLA Policy | 4-tier by priority |
+| 👥 Groups | 3 skill-based (Billing, Technical, General) |
+| 🏷 Custom Fields | Issue Category — 5 values |
+| 📚 Help Center | 3 self-service articles |
+| 📞 Voice | Zendesk Talk — +1 (331) 235-5290 |
+| ⭐ CSAT | Post-resolution surveys active |
+| 🧠 AI Agents | Active on Messaging + Email |
+| 📊 Reporting | 4-report custom Explore dashboard |
 
 ---
 
-### 5. Help Center (Knowledge Base)
-**Problem:** Agents answer the same basic questions hundreds of times 
-a month — password resets, ticket submissions, status checks. This is 
-expensive and unnecessary.
+## Audit Findings & Resolutions
 
-**Solution:** Built a structured Help Center with:
-- **Category:** Getting Started
-- **Section:** Common Questions
-- **3 Published Articles:**
-  - How to Submit a Support Ticket
-  - How to Reset Your Password
-  - How to Check the Status of Your Ticket
+### 🔀 Routing Architecture
+Tickets were landing in a single unmanaged queue with no assignment logic. Implemented skill-based routing using three agent groups — Billing Support, Technical Support, General Support — with trigger logic keyed to a custom Issue Category field. All assignment is now automated at ticket creation.
 
-> Result: Customers can self-serve on the most common issues before 
-> ever creating a ticket — reducing volume and freeing agents for 
-> complex problems that actually need human attention.
+![Groups & Routing](screenshots/05-help-center.png)
 
 ---
 
-### 6. Custom Ticket Field — Issue Category
-**Problem:** Management has no idea what types of issues are coming in 
-most frequently, making it impossible to identify trends, allocate 
-resources, or fix root causes.
+### ⏱ SLA Governance
+No SLA policy existed. Defined a four-tier policy by priority — Urgent (1hr FRT), High (4hr), Normal (8hr), Low (24hr) — with breach visibility on every ticket. Agents have clear response targets and managers have breach data in Explore.
 
-**Solution:** Added a dropdown field agents complete on every ticket:
-- Billing
-- Technical Issue
-- Account Access
-- General Inquiry
-- Feature Request
-
-> Result: Every ticket is tagged with a category, enabling reporting 
-> on issue volume by type — so the team can spot patterns, train for 
-> the right scenarios, and surface product feedback to the right teams.
+![SLA Policy](screenshots/04-sla-policy.png)
 
 ---
 
-## Key Takeaway
+### 📝 Response Consistency
+Agent replies were unstructured and inconsistent across the team. Deployed three macros covering the full ticket lifecycle — acknowledgement, follow-up, and resolution — standardizing tone and reducing average handle time.
 
-Good support operations aren't built on good intentions — they're 
-built on systems. Every configuration in this environment exists 
-because there was a specific problem to solve, not because a feature 
-was available to use.
+![Macros](screenshots/02-macros.png)
 
 ---
 
-## Skills Demonstrated
-- Zendesk Support administration
-- Workflow automation (triggers, macros)
-- SLA management and accountability frameworks
-- Knowledge base and self-service strategy
-- Ticket field customization and data-driven reporting
-- Customer communication design
-- Operational problem-solving
+### 📊 Reporting & Visibility
+No performance reporting existed. Built a custom Explore dashboard with four reports: ticket volume by status, volume by Issue Category, average first reply time, and resolved tickets per agent. Leadership now has real-time operational visibility.
+
+![Explore Dashboard](screenshots/10-explore-dashboard.png)
+
+---
+
+### 📚 Self-Service Deflection
+All contacts required agent handling regardless of complexity. Published three Help Center articles covering the highest-volume query types, enabling customers to self-serve before submitting a ticket.
+
+![Help Center](screenshots/05-help-center.png)
+
+---
+
+### 🧹 Queue Hygiene
+Agents were manually managing stale pending tickets. Configured an automation to send a follow-up prompt and close tickets after 48 hours of customer inactivity. Queue stays current without agent intervention.
+
+![Automations](screenshots/07-automations.png)
+
+---
+
+### 🏷 Ticket Taxonomy
+No structured data was being captured at ticket creation. Added a custom Issue Category field — Billing, Technical, Access, Inquiry, Feature Request — used for routing, Explore reporting, and capacity planning.
+
+![Custom Fields](screenshots/06-ticket-fields.png)
+
+---
+
+### ⚡ Trigger Architecture
+Built a trigger set handling auto-acknowledgement on ticket creation and group assignment by category — ensuring every ticket gets a response and lands with the right team without manual intervention.
+
+![Triggers](screenshots/03-triggers.png)
+
+---
+
+### ⭐ Customer Satisfaction Measurement
+No CSAT mechanism existed. Enabled post-resolution satisfaction surveys to create a continuous feedback loop between customer experience and team performance.
+
+![CSAT](screenshots/08-csat.png)
+
+---
+
+### 📞 Voice Channel
+Support was email-only with no call handling capability. Provisioned Zendesk Talk with a dedicated support number. All calls are automatically logged as tickets, keeping the full customer history in one system.
+
+![Talk](screenshots/09-talk.png)
+
+---
+
+### 🧠 AI Deflection
+All inbound contacts were routed directly to human agents. Activated AI agents on both Messaging and Email channels to handle first contact and resolve common queries autonomously. Escalation to human agents is triggered when resolution confidence is low.
+
+![AI Agent](screenshots/11-ai-agent.png)
+
+---
+
+## 📁 Documentation
+
+| Document | Description |
+|----------|-------------|
+| [Audit Report](audit-report.md) | Full gap analysis and remediation summary |
+| [Integration Architecture](integration-architecture.md) | API, webhooks, and Shopify integration design |
+| [SOP: Ticket Handling](SOPs/01-ticket-handling.md) | Step-by-step ticket process for agents |
+| [SOP: Escalation Process](SOPs/02-escalation-process.md) | When and how to escalate |
+| [SOP: New Agent Onboarding](SOPs/03-new-agent-onboarding.md) | Getting new agents productive fast |
+| [SOP: Change Management](SOPs/04-change-management.md) | Safe deployment of configuration changes |
+
+---
+
+<div align="center">
+
+*Effective support operations require deliberate architecture — not just tool access. Every element in this instance is configured to a specific purpose: route accurately, respond consistently, measure what matters, and reduce friction for both customers and agents.*
+
+</div>
