@@ -36,31 +36,12 @@ Every configuration decision is documented against the operational problem it so
 
 ---
 
-## Configuration Summary
-
-| Component | Details |
-|-----------|---------|
-| 👁 Views | 3 custom views (Open, Pending, Solved 30d) |
-| ⚡ Triggers | 4 (Auto-reply, Auto-assign, Routing ×3) |
-| 🤖 Automations | Auto-close pending — 48hr inactivity |
-| 📝 Macros | 3 (Acknowledge, Follow-Up, Resolve) |
-| ⏱ SLA Policy | 4-tier by priority |
-| 👥 Groups | 3 skill-based (Billing, Technical, General) |
-| 🏷 Custom Fields | Issue Category — 5 values |
-| 📚 Help Center | 3 self-service articles |
-| 📞 Voice | Zendesk Talk — +1 (331) 235-5290 |
-| ⭐ CSAT | Post-resolution surveys active |
-| 🧠 AI Agents | Active on Messaging + Email |
-| 📊 Reporting | 4-report custom Explore dashboard |
-
----
-
 ## Audit Findings & Resolutions
 
 ### 🔀 Routing Architecture
 Tickets were landing in a single unmanaged queue with no assignment logic. Implemented skill-based routing using three agent groups — Billing Support, Technical Support, General Support — with trigger logic keyed to a custom Issue Category field. All assignment is now automated at ticket creation.
 
-![Groups & Routing](screenshots/05-help-center.png)
+![Groups & Routing](screenshots/01-views.png)
 
 ---
 
@@ -131,6 +112,55 @@ Support was email-only with no call handling capability. Provisioned Zendesk Tal
 All inbound contacts were routed directly to human agents. Activated AI agents on both Messaging and Email channels to handle first contact and resolve common queries autonomously. Escalation to human agents is triggered when resolution confidence is low.
 
 ![AI Agent](screenshots/11-ai-agent.png)
+
+---
+
+### 📋 Returns & Exchanges Form
+No dedicated form existed for returns. Built a second ticket form — Returns & Exchanges — with Issue Category and Priority fields, capturing structured data from the moment a customer submits a request.
+
+![Ticket Form](screenshots/12-ticket-form.png)
+
+---
+
+### ⚙️ Order & Complaint Workflows
+No automated routing existed for order or complaint tickets. Built two workflow triggers — Order Status auto-tags and routes to General Support; Complaint trigger escalates billing tickets to Billing Support with High priority.
+
+![Workflows & Triggers](screenshots/13-workflows-triggers.png)
+
+---
+
+### 📧 Support Email Channel
+Support email `support@cjayssolutions.zendesk.com` verified and active as the default channel. All inbound emails automatically become tickets in the queue.
+
+![Email Channel](screenshots/14-email-channel.png)
+
+---
+
+### 🛒 Shopify Integration
+Shopify for Zendesk installed from the Marketplace. Surfaces customer order history, shipping status, and purchase details directly in the ticket sidebar — no tab switching required.
+
+![Shopify Integration](screenshots/15-shopify-integration.png)
+
+---
+
+## Configuration Summary
+
+| Component | Details |
+|-----------|---------|
+| 👁 Views | 3 custom views (Open, Pending, Solved 30d) |
+| ⚡ Triggers | 6 (Auto-reply, Auto-assign, Routing ×3, Workflows ×2) |
+| 🤖 Automations | Auto-close pending — 48hr inactivity |
+| 📝 Macros | 3 (Acknowledge, Follow-Up, Resolve) |
+| ⏱ SLA Policy | 4-tier by priority |
+| 👥 Groups | 3 skill-based (Billing, Technical, General) |
+| 🏷 Custom Fields | Issue Category — 5 values |
+| 📚 Help Center | 3 self-service articles |
+| 📞 Voice | Zendesk Talk — +1 (331) 235-5290 |
+| ⭐ CSAT | Post-resolution surveys active |
+| 🧠 AI Agents | Active on Messaging + Email |
+| 📊 Reporting | 4-report custom Explore dashboard |
+| 📋 Ticket Forms | 2 (Default + Returns & Exchanges) |
+| 🛒 Integrations | Shopify for Zendesk |
 
 ---
 
